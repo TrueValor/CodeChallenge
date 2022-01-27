@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height:100%;
+    width:100vh;
+    background-color: #5a0202;
+  
+    
+.bg-image{
+    position: absolute;
+    right: 0%;
+    background-image: url(../img/BG.png);
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    z-index: auto;
+    }
+
+.title{
+    
+    color: white;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    margin-left: 75px;
+
+        h1{
+            animation: fadeInAnimation ease 1s;
+            font-size: 200px;
+            font-family: "Helvetica Neue";
+        }
+
+.subtitle{
+    width: 100%;
+
+    h3{
+        font-family: arial,sans-serif;
+        text-align: left;
+        margin-top: 5px;
+        letter-spacing: 0.5px;
+        }
+    }
+}  
+
+
+    
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+
+    h2{
+        color:#5a0202;
+        font-family: "Helvetica Neue";
+        font-size: 3rem;
+        padding-bottom: 20px;
+        display: inline-block;
+        background: linear-gradient(to right, #5a0202, #fff);
+        background-position: 0 100%;
+        background-size: 100% 2px;
+        background-repeat: repeat-x;
+    }
+    p{
+        color: gray;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    button{ 
+        background: linear-gradient(to right, #5a0202, #9e5c42);
+        color: white;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    button:active{
+        animation: shake 3s;
+        animation-iteration-count: 10;
+        }
+       
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+    animation: scaleUp ease 1.5s;
+    animation-duration: 1s;
+}
+
+.modalDialog > div {
+    width: 500px;
+    position: fixed;
+    top:-10%;
+    right:60%;
+    margin: 10% auto;
+    padding: 3rem;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 15px -1px #000000; 
+    box-shadow: 3px 3px 15px -1px #000000;
+}
+
+.close {
+    color:#5a0202;
+    line-height: 25px;
+    position: absolute;
+    right: 12px;
+    font-size:25px;
+    text-align: center;
+    top: 12px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close:hover { background: #555555; }
+
+
+    footer{
+        position: fixed;
+        text-align: right;
+        line-height:5px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 10px 10px;
+            img{
+                padding: 7px;
+                }
+    }
+
+
+
+@keyframes scaleUp{
+    0% {
+        transform:scale(0);
+        transform-origin:0 100%;
+        opacity:1
+    }
+    100%{
+        transform:scale(1);
+        transform-origin:0 100%;
+        opacity:1}
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform:translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+}
